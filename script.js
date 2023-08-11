@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     console.log(answers);
     // Send the answers to the API using fetch
-    const apiUrl = "http://localhost:3000/api/post"; // Replace with your API endpoint
+    const apiUrl = "https://wedding-3j8y.onrender.com/api/post"; // Replace with your API endpoint
     nextButton.style.visibility = "hidden";
     questionContainer.textContent = "نورتنا و فرحتنا اكتملت بوجودك"; // say thanks for submitting as well
     fetch(apiUrl, {
