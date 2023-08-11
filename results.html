@@ -68,7 +68,7 @@
       // Fetch data from API and update h1 elements
       function fetchData() {
         // Replace 'API_URL' with your actual API URL
-        fetch("http://localhost:3000/api/random-response")
+        fetch("https://wedding-3j8y.onrender.com/api/random-response")
           .then((response) => response.json())
           .then((data) => {
             document.getElementById("Q1").textContent = data.Q1;
