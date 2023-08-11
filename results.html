@@ -53,10 +53,7 @@
           .then((data) => {
             document.getElementById("Q1").textContent = data.Q1;
             document.getElementById("Q2").textContent = data.Q2;
-            document.getElementById("Q3").textContent = data.Q3;
-            document.getElementById("Q4").textContent = data.Q4;
-            document.getElementById("Q5").textContent = data.Q5;
-            let name = data.Q6;
+            let name = data.Q2;
             document
               .getElementById("revealButton")
               .addEventListener("click", function () {
