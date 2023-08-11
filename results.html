@@ -54,23 +54,20 @@
             document.getElementById("Q1").textContent = data.Q1;
             document.getElementById("Q2").textContent = data.Q2;
             let name = data.Q2;
-            document
-              .getElementById("revealButton")
-              .addEventListener("click", function () {
-                document.getElementById("Q2").textContent = name;
-              });
-
-            document
-              .getElementById("nextButton")
-              .addEventListener("click", function () {
-                location.reload();
-              });
+    
+            document.getElementById("revealButton").addEventListener("click", function () {
+              document.getElementById("Q2").textContent = name;
+            });
+    
+            document.getElementById("nextButton").addEventListener("click", function () {
+              location.reload();
+            });
           })
           .catch((error) => {
             console.log("Error:", error);
           });
       }
-
+    
       // Fetch data on page load
       window.addEventListener("load", fetchData);
     </script>
