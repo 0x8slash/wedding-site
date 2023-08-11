@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mohaned & Sama</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+
+      body {
+        font-family: "Tajawal", sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      /* Customize additional styles here */
+      .question-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .question-container input[type="text"] {
+        width: 200px;
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        font-size: 16px;
+
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+      }
+
+      .btn-success:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+      }
+
+      .container {
+        margin-top: 10px;
+      }
+
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .logo {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .form-section {
+        margin-top: 50px;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .button-fade-in {
+        animation: fadeIn 0.5s;
+      }
+    </style>
+  </head>
+  <body class="h-screen w-screen">
+    <div class="container">
+      <div class="logo-container">
+        <img class="logo img-fluid" src="logo.jpeg" alt="Wedding Logo" />
+      </div>
+      <h1 class="text-center">Wedding Guestbook</h1>
+      <!-- Form Section -->
+      <section id="form-section" class="form-section">
+        <form id="wedding-form">
+          <div
+            id="question-container"
+            class="question-container font-weight-bold text-success"
+          >
+            <!-- Questions and Inputs will be dynamically added here -->
+          </div>
+          <div class="text-center">
+            <button
+              class="btn btn-success mt-3 rounded button-fade-in"
+              id="next-btn"
+              type="button"
+            >
+              Next Question
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- Add Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

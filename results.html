@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Results</title>
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+  </head>
+  <body class="flex flex-col items-center justify-center h-screen">
+    <div class="flex flex-col items-center">
+      <img class="mt-4 mb-1 h-48 w-72" src="logo.jpeg" alt="" />
+      <div class="flex flex-col gap-y-10">
+        <div dir="rtl">
+          <span class="font-bold text-xl underline"
+            >اكتب حاجه حلوه انا و انت عرفنا بعض بيها و نعرف بعض من قد ايه</span
+          >
+          <h1 id="Q1" class="mt-2 font-black text-lg text-green-500"></h1>
+        </div>
+
+        <div dir="rtl">
+          <span class="font-bold text-xl underline">اتمنى حاجه حلوه لمهند</span>
+
+          <h1 id="Q2" class="mt-2 font-black text-lg text-green-500"></h1>
+        </div>
+
+        <div dir="rtl">
+          <span class="font-bold text-xl underline">اتمنى حاجه حلوه لسما</span>
+
+          <h1 id="Q3" class="mt-2 font-black text-lg text-green-500"></h1>
+        </div>
+
+        <div dir="rtl">
+          <span class="font-bold text-xl underline"
+            >اقترح لينا مكان نسافر فيه
+          </span>
+
+          <h1 id="Q4" class="mt-2 font-black text-lg text-green-500"></h1>
+        </div>
+
+        <div dir="rtl">
+          <span class="font-bold text-xl underline"
+            >اقترح اكله حلوه تحب تاكلها لما تيجى تزورنا
+          </span>
+
+          <h1 id="Q5" class="mt-2 font-black text-lg text-green-500"></h1>
+        </div>
+
+        <div dir="rtl">
+          <span class="font-bold text-xl underline">اسم</span>
+          <h1 id="Q6" class="mt-2 font-black text-lg text-purple-500"></h1>
+        </div>
+
+        <button
+          id="revealButton"
+          class="mt-4 mb-5 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Reveal
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Fetch data from API and update h1 elements
+      function fetchData() {
+        // Replace 'API_URL' with your actual API URL
+        fetch("http://localhost:3000/api/random-response")
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById("Q1").textContent = data.Q1;
+            document.getElementById("Q2").textContent = data.Q2;
+            document.getElementById("Q3").textContent = data.Q3;
+            document.getElementById("Q4").textContent = data.Q4;
+            document.getElementById("Q5").textContent = data.Q5;
+            let name = data.Q6;
+            document
+              .getElementById("revealButton")
+              .addEventListener("click", function () {
+                document.getElementById("Q6").textContent = name;
+              });
+
+            document
+              .getElementById("nextButton")
+              .addEventListener("click", function () {
+                location.reload();
+              });
+          })
+          .catch((error) => {
+            console.log("Error:", error);
+          });
+      }
+
+      // Fetch data on page load
+      window.addEventListener("load", fetchData);
+    </script>
+  </body>
+</html>
