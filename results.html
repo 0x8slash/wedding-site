@@ -14,24 +14,39 @@
   <body class="flex flex-col items-center justify-center h-screen">
     <div class="flex flex-col items-center">
       <img class="mt-4 mb-1 h-48 w-max" src="logo.jpeg" alt="" />
-      <div class="flex flex-col gap-y-10">
+      <div class="flex flex-col gap-y-10 text-center">
         <div dir="rtl">
           <span class="font-bold text-xl underline"
             >اكتب حاجه حلوه انا و انت عرفنا بعض بيها و نعرف بعض من قد ايه</span
           >
-          <h1 id="Q1" class="mt-2 font-black text-lg text-green-500"></h1>
+          <h1
+            id="Q1"
+            class="mt-2 font-black text-lg text-green-500 text-center"
+          >
+            No more results
+          </h1>
         </div>
 
         <div dir="rtl">
           <span class="font-bold text-xl underline">اتمنى حاجه حلوه لمهند</span>
 
-          <h1 id="Q2" class="mt-2 font-black text-lg text-green-500"></h1>
+          <h1
+            id="Q2"
+            class="mt-2 font-black text-lg text-green-500 text-center"
+          >
+            No more results
+          </h1>
         </div>
 
         <div dir="rtl">
           <span class="font-bold text-xl underline">اتمنى حاجه حلوه لسما</span>
 
-          <h1 id="Q3" class="mt-2 font-black text-lg text-green-500"></h1>
+          <h1
+            id="Q3"
+            class="mt-2 font-black text-lg text-green-500 text-center"
+          >
+            No more results
+          </h1>
         </div>
 
         <div dir="rtl">
@@ -39,7 +54,12 @@
             >اقترح لينا مكان نسافر فيه
           </span>
 
-          <h1 id="Q4" class="mt-2 font-black text-lg text-green-500"></h1>
+          <h1
+            id="Q4"
+            class="mt-2 font-black text-lg text-green-500 text-center"
+          >
+            No more results
+          </h1>
         </div>
 
         <div dir="rtl">
@@ -47,12 +67,20 @@
             >اقترح اكله حلوه تحب تاكلها لما تيجى تزورنا
           </span>
 
-          <h1 id="Q5" class="mt-2 font-black text-lg text-green-500"></h1>
+          <h1
+            id="Q5"
+            class="mt-2 font-black text-lg text-green-500 text-center"
+          >
+            No more results
+          </h1>
         </div>
 
         <div dir="rtl">
           <span class="font-bold text-xl underline">اسم</span>
-          <h1 id="Q6" class="mt-2 font-black text-lg text-purple-500"></h1>
+          <h1
+            id="Q6"
+            class="mt-2 font-black text-lg text-purple-500 text-center"
+          ></h1>
         </div>
 
         <button
@@ -95,6 +123,7 @@
       }
 
       // Fetch data on page load
+      window.addEventListener("load", alert("To Start Press OK."));
       window.addEventListener("load", fetchData);
     </script>
   </body>
